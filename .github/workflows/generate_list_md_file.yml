@@ -1,0 +1,28 @@
+name: create list.md python
+on:
+  push:
+    paths:
+      - 'blog-md/list/*.md'
+
+jobs:
+  build_page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+            python-version: '3.10' # install the python version needed
+      - name: execute py script # run main.py
+        run: python create_list.py
+      - name: Commit changes
+        run: |
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git add static/blog.json
+          git commit -m "Update list.md"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
