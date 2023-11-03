@@ -7,7 +7,7 @@ try:
     print('removed file')
 except FileNotFoundError: 
     pass
-file_list = open(file_list_name, "w")
+file_list = open(file_list_name, "w+")
 print('created file')
 files = os.listdir('list')
 for index, f in enumerate(files):
