@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'blog-md/list/*.md'
+  workflow_dispatch:
 
 jobs:
   build_page:
