@@ -4,7 +4,7 @@ Open a `Command Prompt (Open As Administrator)`
 
 Make a directory `C:\Temp` and operate from that directory.
 
-Then at the command prompt you can use:
+Then in the command prompt you can use:
 
 ```bat
 "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -restore -listall
