@@ -9,9 +9,9 @@
     }
   </style>
 
-<section class="level-2">
+<button class="level-2">
 ## [Submeter um nome](https://docs.google.com/forms/d/e/1FAIpQLSdKoouLxivkotXBQ_17x1gSN5SV7iY8_5Y5lFrcqKS7PEf5UA/viewform?usp=publish-editor)
-</section>
+</button>
 </div>
 
 1. Aarão
